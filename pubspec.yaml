@@ -131,3 +131,8 @@ flutter:
     - family: Julius
       fonts:
         - asset: assets/fonts/Julius/JuliusSansOne-Regular.ttf
+
+
+  assets:
+    - assets/
+    - assets/images/

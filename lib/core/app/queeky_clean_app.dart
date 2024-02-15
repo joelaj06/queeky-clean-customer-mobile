@@ -15,9 +15,10 @@ class QueekyCleanApp extends StatelessWidget {
       designSize: const Size(375, 812),
       builder: (  BuildContext context,
           Widget? child,) => GetMaterialApp(
+          themeMode: ThemeMode.light,
           debugShowCheckedModeBanner: false,
-          title: 'Marketline StoreFront',
-          theme: AppTheme(AppLightTheme()).data,
+          title: 'Queeky Clean',
+          theme: AppTheme(AppLightTheme(),context).data,
           getPages: Pages.pages,
           initialRoute:  AppRoutes.onboarding
       ),

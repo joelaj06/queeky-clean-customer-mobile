@@ -10,6 +10,7 @@ abstract class ThemeColor {
   Color get success;
   Color get error;
 
+  Color get white;
   Color get grey;
   Color get yellow;
   Color get blue;

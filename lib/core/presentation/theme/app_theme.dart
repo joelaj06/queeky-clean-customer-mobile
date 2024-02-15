@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:queeky_clean/core/presentation/theme/secondary_color.dart';
-
 
 import 'theme.dart';
 
 class AppTheme {
-  const AppTheme(this.colors);
+  const AppTheme(this.colors, this.context);
 
   final ThemeColor colors;
+  final BuildContext context;
 
   ThemeData get data => ThemeData(
         useMaterial3: true,
@@ -19,7 +18,7 @@ class AppTheme {
         primaryIconTheme: IconThemeData(
           color: colors.primary,
         ),
-        colorScheme: ColorScheme.fromSwatch(
+         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: colors.primary,
           //primaryColorDark: colors.primary.shade900,
           accentColor: colors.accent,
@@ -32,208 +31,118 @@ class AppTheme {
         primaryColor: colors.primary,
         brightness: colors.brightness,
         scaffoldBackgroundColor: colors.background,
-        unselectedWidgetColor: colors.lightBlue,
-        disabledColor: colors.lightBlue,
-        tabBarTheme: TabBarTheme(
-          indicatorSize: TabBarIndicatorSize.tab,
-          unselectedLabelColor: colors.textDark,
-          labelColor: Colors.white,
-          indicator: BoxDecoration(
-            color: colors.primary,
-          ),
-          labelStyle: caption.copyWith(
-            color: Colors.white,
-            fontWeight: FontWeight.w700,
-            fontFamily: AppFonts.base,
-            letterSpacing: -.25,
-            fontSize: 15,
-          ),
-          unselectedLabelStyle: caption.copyWith(
-            color: colors.textDark,
-            fontWeight: FontWeight.w700,
-            letterSpacing: -.25,
-            fontSize: 15,
-            fontFamily: AppFonts.base,
-          ),
-        ),
         textTheme: TextTheme(
-          displaySmall: h3,
-          headlineMedium: h4,
-          headlineSmall: h5,
-          titleLarge: h6,
-          bodyLarge: body1,
-          bodyMedium: body2,
-          titleMedium: sub1,
-          titleSmall: sub2,
-          labelSmall: overline,
-          bodySmall: caption,
-          labelLarge: button,
-        ),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-            backgroundColor: SecondaryColor.color),
-        appBarTheme: AppBarTheme(
-          centerTitle: true,
-          toolbarTextStyle: body1,
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,
-          titleTextStyle: body1.copyWith(
-            fontSize: AppFontSizes.h6,
-            fontWeight: FontWeight.w600,
-            color: colors.textDark,
-            fontFamily: AppFonts.base,
-          ),
-          iconTheme: IconThemeData(
-            color: colors.primary,
-          ),
-        ),
-        iconTheme: IconThemeData(
-          color: colors.text,
-        ),
-        buttonTheme: const ButtonThemeData(
-          textTheme: ButtonTextTheme.primary,
-          height: 50,
-        ),
-        indicatorColor: colors.primary,
-        canvasColor: colors.background,
-        checkboxTheme: CheckboxThemeData(
-          fillColor: MaterialStateProperty.resolveWith<Color?>(
-              (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return null;
-            }
-            if (states.contains(MaterialState.selected)) {
-              return colors.text;
-            }
-            return null;
-          }),
-        ),
-        radioTheme: RadioThemeData(
-          fillColor: MaterialStateProperty.resolveWith<Color?>(
-              (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return null;
-            }
-            if (states.contains(MaterialState.selected)) {
-              return colors.text;
-            }
-            return null;
-          }),
-        ),
-        switchTheme: SwitchThemeData(
-          thumbColor: MaterialStateProperty.resolveWith<Color?>(
-              (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return null;
-            }
-            if (states.contains(MaterialState.selected)) {
-              return colors.text;
-            }
-            return null;
-          }),
-          trackColor: MaterialStateProperty.resolveWith<Color?>(
-              (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return null;
-            }
-            if (states.contains(MaterialState.selected)) {
-              return colors.text;
-            }
-            return null;
-          }),
-        ),
+          displaySmall: displaySmall,
+          headlineMedium: headlineMedium,
+          headlineSmall: headlineSmall,
+          titleLarge: titleLarge,
+          bodyLarge: bodyLarge,
+          bodyMedium: bodyMedium,
+          titleMedium: titleMedium,
+          titleSmall: titleSmall,
+          labelSmall: labelSmall,
+          bodySmall: bodySmall,
+          labelLarge: labelLarge,
 
+        ),
       );
 
   TextStyle get h2 => const TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w500,
         color: Colors.black,
+        fontFamily: AppFonts.poppins,
       );
 
-  TextStyle get h3 => TextStyle(
+  TextStyle get displaySmall => TextStyle(
         fontSize: AppFontSizes.h3,
         fontWeight: FontWeight.w600,
-        fontFamily: AppFonts.base,
+        fontFamily: AppFonts.poppins,
         color: colors.secondary,
       );
 
-  TextStyle get h4 => TextStyle(
+  TextStyle get headlineMedium => TextStyle(
         fontSize: AppFontSizes.h4,
         fontWeight: FontWeight.w600,
-        fontFamily: AppFonts.base,
+        fontFamily: AppFonts.poppins,
         color: colors.secondary,
       );
 
-  TextStyle get h5 => TextStyle(
+  TextStyle get headlineSmall => TextStyle(
         fontSize: AppFontSizes.h5,
-        fontFamily: AppFonts.base,
+        fontFamily: AppFonts.poppins,
         fontWeight: FontWeight.w600,
         color: colors.secondary,
       );
 
-  TextStyle get h6 => TextStyle(
+  TextStyle get titleLarge => TextStyle(
         fontSize: AppFontSizes.h6,
         fontWeight: FontWeight.w500,
+        fontFamily: AppFonts.poppins,
         // color: colors.secondary,
-        //  fontFamily: AppFonts.base,
+        //  fontFamily: AppFonts.poppins,
       );
 
-  TextStyle get sub1 => const TextStyle(
+  TextStyle get titleMedium => const TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w400,
         letterSpacing: 0.15,
+        fontFamily: AppFonts.poppins,
         /* fontSize: AppFontSizes.subtitle1,
         fontWeight: FontWeight.w400,
         color: colors.text,*/
       );
 
-  TextStyle get sub2 => const TextStyle(
+  TextStyle get titleSmall => const TextStyle(
         fontSize: 14, fontWeight: FontWeight.w500, letterSpacing: 0.1,
-        /* fontSize: AppFontSizes.subtitle2,
-        fontWeight: FontWeight.w500,
-        color: colors.text,*/
-        // letterSpacing: .1,
+        fontFamily: AppFonts.poppins,
+
       );
 
-  TextStyle get body1 => const TextStyle(
+  TextStyle get bodyLarge => TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w400,
         letterSpacing: 0.5,
         /*fontSize: AppFontSizes.bodyText1,
         fontWeight: FontWeight.w600,
-        color: colors.text,*/
+   */
+        fontFamily: AppFonts.poppins,
+        color: colors.text,
       );
 
-  TextStyle get body2 => const TextStyle(
+  TextStyle get bodyMedium => const TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w400,
         letterSpacing: 0.25,
-        /*fontSize: AppFontSizes.bodyText2,
-        fontWeight: FontWeight.w600,
-        color: colors.text,*/
+        fontFamily: AppFonts.poppins,
       );
 
-  TextStyle get caption => TextStyle(
+  TextStyle get bodySmall => TextStyle(
         fontSize: AppFontSizes.caption,
         color: colors.hint.shade300,
+        fontFamily: AppFonts.poppins,
       );
 
-  TextStyle get overline => TextStyle(
+  TextStyle get labelSmall => TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w400,
         color: colors.hint,
         letterSpacing: .4,
+        fontFamily: AppFonts.poppins,
       );
 
-  TextStyle get button => const TextStyle(
-      fontSize: 14, fontWeight: FontWeight.bold, letterSpacing: 1.25);
+  TextStyle get labelLarge => const TextStyle(
+      fontFamily: AppFonts.poppins,
+      fontSize: 14,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1.25);
 
   TextStyle get smallest => TextStyle(
-        fontSize: AppFontSizes.smallest,
-        fontWeight: FontWeight.w500,
-        color: colors.text,
-        letterSpacing: .7,
-      );
+      fontSize: AppFontSizes.smallest,
+      fontWeight: FontWeight.w500,
+      color: colors.text,
+      letterSpacing: .7,
+      fontFamily: AppFonts.poppins);
 }
 
 class AppFontSizes {
@@ -307,7 +216,7 @@ extension ThemeExtension on BuildContext {
   TextStyle get appBarTitle => theme.textTheme.bodyLarge!.copyWith(
         fontSize: AppFontSizes.h6,
         fontWeight: FontWeight.w600,
-        fontFamily: AppFonts.base,
+        fontFamily: AppFonts.poppins,
       );
 
   bool get isDarkMode =>
