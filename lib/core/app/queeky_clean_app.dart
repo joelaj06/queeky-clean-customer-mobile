@@ -20,7 +20,7 @@ class QueekyCleanApp extends StatelessWidget {
           title: 'Queeky Clean',
           theme: AppTheme(AppLightTheme(),context).data,
           getPages: Pages.pages,
-          initialRoute:  AppRoutes.onboarding
+          initialRoute:  AppRoutes.base
       ),
     );
   }

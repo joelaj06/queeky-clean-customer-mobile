@@ -268,17 +268,17 @@
             </list>
           </value>
         </entry>
+        <entry key="iconsax">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/iconsax-0.0.8/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="io">
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/io-1.0.4/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="ionicons">
-          <value>
-            <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/ionicons-0.2.2/lib" />
             </list>
           </value>
         </entry>
@@ -566,8 +566,8 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http_multi_server-3.2.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/iconsax-0.0.8/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/io-1.0.4/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/ionicons-0.2.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.7.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.8.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/json_serializable-6.7.1/lib" />

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ionicons/ionicons.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:queeky_clean/core/presentation/theme/app_theme.dart';
 import 'package:queeky_clean/core/presentation/theme/primary_color.dart';
 import 'package:queeky_clean/core/presentation/utils/string_utils.dart';
@@ -316,12 +316,12 @@ class _AppTextInputState extends State<AppTextInput>
                               },
                               icon: obscuringText
                                   ? Icon(
-                                      Ionicons.eye_outline,
+                                      Iconsax.eye,
                                       color: widget.textColor?.withOpacity(0.5),
                                       size: 20,
                                     )
                                   : Icon(
-                                      Ionicons.eye_off_outline,
+                                      Iconsax.eye_slash,
                                       color: widget.textColor?.withOpacity(0.5),
                                       size: 20,
                                     ),
