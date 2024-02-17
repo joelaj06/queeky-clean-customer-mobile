@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:queeky_clean/core/presentation/routes/app_routes.dart';
 import 'package:queeky_clean/core/presentation/theme/app_theme.dart';
 import 'package:queeky_clean/core/presentation/utils/app_asset_images.dart';
 import 'package:queeky_clean/core/presentation/utils/app_paddings.dart';
@@ -52,7 +53,7 @@ class OnboardingScreen extends StatelessWidget {
             padding:
                 AppPaddings.bodyH.subtract(AppPaddings.lH).add(AppPaddings.mV),
             child: Column(
-              children: [
+              children: <Widget>[
                 const Text(
                   'Welcome to a new era of cleanliness and comfort – '
                   'where every garment is treated with the care it deserves.',
@@ -60,7 +61,9 @@ class OnboardingScreen extends StatelessWidget {
                 ),
                 const AppSpacing(v: 20,),
                 AppButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(AppRoutes.signup);
+                  },
                   child: const Text('Let\'s Get Started'),
                 ),
                 const AppSpacing(v: 20),
@@ -71,7 +74,9 @@ class OnboardingScreen extends StatelessWidget {
                           style: context.overline.copyWith(fontSize: 13)),
                       WidgetSpan(
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pushNamed(AppRoutes.login);
+                          },
                           child: Text(
                             'Login',
                             style: context.body2.copyWith(
