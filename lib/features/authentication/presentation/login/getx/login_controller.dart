@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:queeky_clean/core/presentation/routes/app_routes.dart';
 
 class LoginController extends GetxController{
 
@@ -6,6 +7,11 @@ class LoginController extends GetxController{
   RxString email = ''.obs;
   RxString password = ''.obs;
 
+
+
+  void onUserLogin(){
+    Get.toNamed<dynamic>(AppRoutes.base);
+  }
 
   void onEmailInputChanged(String value) {
     email(value);

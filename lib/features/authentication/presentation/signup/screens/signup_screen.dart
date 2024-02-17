@@ -7,10 +7,11 @@ import 'package:queeky_clean/core/presentation/utils/app_spacing.dart';
 import 'package:queeky_clean/core/presentation/widgets/animated_column.dart';
 import 'package:queeky_clean/core/presentation/widgets/app_button.dart';
 import 'package:queeky_clean/core/presentation/widgets/app_text_input.dart';
-import 'package:queeky_clean/features/authentication/presentation/login/getx/login_controller.dart';
 
-class LoginScreen extends GetView<LoginController> {
-  const LoginScreen({super.key});
+import '../getx/signup_controller.dart';
+
+class SignupScreen extends GetView<SignupController> {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +33,13 @@ class LoginScreen extends GetView<LoginController> {
   Widget _buildFormField(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        image: DecorationImage(
-          opacity: 0.1,
-          fit: BoxFit.cover,
-          image: AssetImage(
-            AppAssetImages.laundryLineArt,
-
+          image: DecorationImage(
+              opacity: 0.1,
+              fit: BoxFit.cover,
+              image: AssetImage(
+                AppAssetImages.laundryLineArt,
+              )
           )
-        )
       ),
       child: Padding(
         padding: AppPaddings.mA,
@@ -49,9 +49,23 @@ class LoginScreen extends GetView<LoginController> {
             children: <Widget>[
               const AppSpacing(v: 10,),
               AppTextInput(
+                hintText: 'Full Name',
+                onChanged: controller.onNameInputChanged,
+                validator: controller.validateName,
+              ),
+              const AppSpacing(v: 10,),
+              AppTextInput(
+                hintText: 'Contact',
+                onChanged: controller.onContactInputChanged,
+                validator: controller.validateContact,
+                textInputType: TextInputType.number,
+              ),
+              const AppSpacing(v: 10,),
+              AppTextInput(
                 hintText: 'Email',
                 onChanged: controller.onEmailInputChanged,
                 validator: controller.validateEmail,
+                textInputType: TextInputType.emailAddress,
               ),
               const AppSpacing(v: 10,),
               AppTextInput(
@@ -61,13 +75,21 @@ class LoginScreen extends GetView<LoginController> {
                 onChanged: controller.onPasswordInputChanged,
                 validator: controller.validatePassword,
               ),
+              const AppSpacing(v: 10,),
+              AppTextInput(
+                hintText: 'Confirm Password',
+                showObscureTextToggle: true,
+                obscureText: true,
+                onChanged: controller.onConfirmPasswordInputChanged,
+                validator: controller.validatePasswordConfirmation,
+              ),
               const AppSpacing(v: 20,),
               Obx(() => AppButton(
-                  key: const Key('loginButton'),
-                  enabled: controller.formIsValid.value,
-                  onPressed: controller.onUserLogin,
-                  child: const Text('Login'),
-                ),
+                key: const Key('loginButton'),
+                enabled: controller.formIsValid.value,
+                onPressed: () {},
+                child: const Text('Sign up'),
+              ),
               )
             ],
           ),
@@ -102,13 +124,13 @@ class LoginScreen extends GetView<LoginController> {
         children: <Widget>[
           const AppSpacing(v: 56),
           Text(
-            'Account Login',
+            'Create Account',
             style: context.h2.copyWith(
               color: Colors.white,
             ),
           ),
           Text(
-            'Fill in your information to sign in.',
+            'Fill out your information to register.',
             style: context.h6.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.normal,
