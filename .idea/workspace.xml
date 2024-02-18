@@ -5,25 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d84b3f-45e2-41df-9b2f-c8ecaafd7095" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/core/presentation/nav/bottom_nav.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/cart/getx/cart_bindings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/cart/getx/cart_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/cart/screens/cart_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/getx/home_bindings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/getx/home_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/screens/home_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/more/screens/more_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/notification/getx/notification_bindings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/notification/getx/notification_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/notification/screens/notification_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/brush.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/bubble 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/bubbles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/clean-clothes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cleaning-spray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/deep-clean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/steam_press.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/washing-machine-outline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/washing-machine.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/app/queeky_clean_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/app/queeky_clean_app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/presentation/routes/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/routes/app_routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/presentation/routes/pages.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/routes/pages.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/presentation/widgets/app_text_input.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/widgets/app_text_input.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/base/screens/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/base/screens/base_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/presentation/theme/app_light_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/theme/app_light_theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/presentation/theme/primary_color.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/theme/primary_color.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/presentation/utils/app_asset_images.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/utils/app_asset_images.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/screens/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/screens/home_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,8 +97,8 @@
       <recent name="C:\mobile\queeky_clean\lib\core\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\mobile\repos\queeky-clean-customer-mobile\lib\features\queeky_clean" />
       <recent name="C:\mobile\repos\queeky-clean-customer-mobile\assets\images" />
+      <recent name="C:\mobile\repos\queeky-clean-customer-mobile\lib\features\queeky_clean" />
       <recent name="C:\mobile\queeky_clean\lib\core\presentation" />
     </key>
   </component>

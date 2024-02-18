@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 ///Colors Generated from http://mcg.mbitson.com/
 
 class PrimaryColor {
+  static const Color background = Color(0xfffcfffd);
   static const MaterialColor color = MaterialColor(_primaryPrimaryValue, <int, Color>{
     50: Color(0xFFEAF2F0),
     100: Color(0xFFC9DFD9),

@@ -21,7 +21,7 @@ class AppLightTheme implements ThemeColor {
   Color error = const Color(0xFFD20000);
 
   @override
-  Color background = Colors.white;
+  Color background = PrimaryColor.background;
   @override
   Color background40 = const Color(0xFFF4F5F7);
 
