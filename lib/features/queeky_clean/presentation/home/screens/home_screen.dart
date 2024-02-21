@@ -34,7 +34,7 @@ class HomeScreen extends GetView<HomeController> {
                           style: context.h6,
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: controller.navigateToOrdersScreen,
                           child: const Text('View All'),
                         ),
                       ],
