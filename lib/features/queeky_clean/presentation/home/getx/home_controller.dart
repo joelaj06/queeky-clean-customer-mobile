@@ -7,8 +7,8 @@ class HomeController extends GetxController{
 
   void navigateToOrdersScreen(){
     Get.to(() => const OrderScreen(),
-    transition: Transition.cupertinoDialog,
-    duration: const Duration(milliseconds: 1000,));
+    transition: Transition.rightToLeftWithFade,
+    duration: const Duration(milliseconds: 500,));
   }
 
 }

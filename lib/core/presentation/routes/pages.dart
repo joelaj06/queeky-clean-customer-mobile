@@ -12,6 +12,7 @@ import 'package:queeky_clean/features/queeky_clean/presentation/home/getx/home_b
 import 'package:queeky_clean/features/queeky_clean/presentation/home/screens/home_screen.dart';
 import 'package:queeky_clean/features/queeky_clean/presentation/notification/getx/notification_bindings.dart';
 import 'package:queeky_clean/features/queeky_clean/presentation/orders/getx/order_bindings.dart';
+import 'package:queeky_clean/features/queeky_clean/presentation/orders/screens/order_preview_screen.dart';
 import 'package:queeky_clean/features/queeky_clean/presentation/orders/screens/order_screen.dart';
 
 class Pages {
@@ -24,19 +25,25 @@ class Pages {
       name: AppRoutes.login,
       page: () => const LoginScreen(),
       binding: LoginBindings(),
-    ), GetPage<AppRoutes>(
+    ),
+    GetPage<AppRoutes>(
       name: AppRoutes.signup,
       page: () => const SignupScreen(),
       binding: SignupBindings(),
-    ),GetPage<AppRoutes>(
+    ),
+    GetPage<AppRoutes>(
       name: AppRoutes.home,
       page: () => const HomeScreen(),
-      bindings: <Bindings>[HomeBindings(),],
-    ),GetPage<AppRoutes>(
+      bindings: <Bindings>[
+        HomeBindings(),
+      ],
+    ),
+    GetPage<AppRoutes>(
       name: AppRoutes.cart,
       page: () => const CartScreen(),
       binding: CartBindings(),
-    ), GetPage<AppRoutes>(
+    ),
+    GetPage<AppRoutes>(
       name: AppRoutes.base,
       page: () => const BaseScreen(),
       bindings: <Bindings>[
@@ -46,10 +53,14 @@ class Pages {
         NotificationBindings(),
       ],
     ),
-
     GetPage<AppRoutes>(
       name: AppRoutes.orders,
       page: () => const OrderScreen(),
+      binding: OrderBindings(),
+    ),
+    GetPage<AppRoutes>(
+      name: AppRoutes.orderPreview,
+      page: () => const OrderPreviewScreen(),
       binding: OrderBindings(),
     ),
   ];

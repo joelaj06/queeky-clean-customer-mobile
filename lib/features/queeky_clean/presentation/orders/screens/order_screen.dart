@@ -41,7 +41,14 @@ class OrderScreen extends GetView<OrderController> {
         shrinkWrap: true,
         itemCount: 12,
         itemBuilder: (BuildContext context, int index) {
-          return Padding(
+          return _buildOrderCard(index, context);
+        });
+  }
+
+  Widget _buildOrderCard(int index, BuildContext context) {
+    return GestureDetector(
+      onTap: controller.navigateToOrderPreviewScreen,
+      child: Padding(
             padding: AppPaddings.mA,
             child: Container(
               padding: AppPaddings.mA,
@@ -120,8 +127,8 @@ class OrderScreen extends GetView<OrderController> {
                 ],
               ),
             ),
-          );
-        });
+          ),
+    );
   }
 
   Widget _buildSearchTextField(BuildContext context) {
@@ -172,12 +179,7 @@ class OrderScreen extends GetView<OrderController> {
             size: 30,
           ),
           onPressed: () {
-            showDatePicker(
-              context: context,
-              firstDate: DateTime(2023),
-              lastDate: DateTime(DateTime.now().year),
-
-            );
+            controller.onDateSelected(context);
           },
         ),
       ],

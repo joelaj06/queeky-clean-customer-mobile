@@ -13,4 +13,5 @@ class AppAssetImages{
   static const String washingMachine = '$_asset/washing-machine.png';
   static const String washingMachine2 = '$_asset/washing-machine-outline.png';
   static const String bubbles2 = '$_asset/bubble 2.png';
+  static const String paperCut = '$_asset/paper-cut.png';
 }
