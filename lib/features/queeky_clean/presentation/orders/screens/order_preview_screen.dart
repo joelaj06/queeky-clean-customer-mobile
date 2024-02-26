@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:queeky_clean/core/presentation/theme/app_theme.dart';
 import 'package:queeky_clean/core/presentation/utils/app_asset_images.dart';
 import 'package:queeky_clean/core/presentation/utils/app_paddings.dart';
+import 'package:queeky_clean/core/presentation/utils/app_spacing.dart';
 import 'package:queeky_clean/features/queeky_clean/presentation/orders/getx/order_controller.dart';
 
 import '../../../data/models/response/product/product_response.dart';
@@ -14,6 +15,7 @@ class OrderPreviewScreen extends GetView<OrderController> {
 
   @override
   Widget build(BuildContext context) {
+    controller.getOrderTotalAmount();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Order Details'),
@@ -28,7 +30,6 @@ class OrderPreviewScreen extends GetView<OrderController> {
       child: Column(
         children: <Widget>[
           Container(
-            height: 400, //Todo implement dynamic height for list
             padding: AppPaddings.mA,
             decoration: BoxDecoration(
                 color: Colors.white, // context.colors.primary.shade50,
@@ -46,7 +47,7 @@ class OrderPreviewScreen extends GetView<OrderController> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     SizedBox(
-                      width: context.width * 0.25,
+                      width: context.width * 0.15,
                       child: Text(
                         'Qty',
                         style: context.h6.copyWith(
@@ -63,9 +64,18 @@ class OrderPreviewScreen extends GetView<OrderController> {
                       ),
                     ),
                     SizedBox(
-                      width: context.width * 0.30,
+                      width: context.width * 0.20,
                       child: Text(
                         'Price(GHS)',
+                        textAlign: TextAlign.end,
+                        style: context.h6.copyWith(
+                          fontSize: 16,
+                        ),
+                      ),
+                    ), SizedBox(
+                      width: context.width * 0.20,
+                      child: Text(
+                        'Total(GHS)',
                         textAlign: TextAlign.end,
                         style: context.h6.copyWith(
                           fontSize: 16,
@@ -74,9 +84,16 @@ class OrderPreviewScreen extends GetView<OrderController> {
                     ),
                   ],
                 ),
-                const Divider(height: 1,color: Colors.black,),
-                const Divider( //height: 1,
-                  color: Colors.black,),
+                const Divider(
+                  color: Colors.black,
+                ),
+                const Divider(
+                  height: 2,
+                  color: Colors.black,
+                ),
+                const AppSpacing(
+                  v: 10,
+                ),
                 ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
@@ -87,6 +104,31 @@ class OrderPreviewScreen extends GetView<OrderController> {
                         controller.order.items[index],
                       );
                     }),
+                const AppSpacing(
+                  v: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Text(
+                      'Total Due: ',
+                      style: context.h6.copyWith(
+                        fontSize: 16,
+                      ),
+                    ),
+                    Obx(
+                      () => Text(
+                        controller.totalDue.toStringAsFixed(2),
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                          decorationStyle: TextDecorationStyle.double,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
@@ -117,9 +159,10 @@ class OrderPreviewScreen extends GetView<OrderController> {
     return Row(
       children: <Widget>[
         SizedBox(
-          width: context.width * 0.25,
+          width: context.width * 0.15,
           child: Text(
             item.quantity.toString(),
+            //    textAlign: TextAlign.end,
           ),
         ),
         Expanded(
@@ -128,9 +171,16 @@ class OrderPreviewScreen extends GetView<OrderController> {
           ),
         ),
         SizedBox(
-          width: context.width * 0.30,
+          width: context.width * 0.20,
           child: Text(
             item.price.toStringAsFixed(2),
+            textAlign: TextAlign.end,
+          ),
+        ),
+        SizedBox(
+          width: context.width * 0.20,
+          child: Text(
+            (item.price * item.quantity).toStringAsFixed(2),
             textAlign: TextAlign.end,
           ),
         )

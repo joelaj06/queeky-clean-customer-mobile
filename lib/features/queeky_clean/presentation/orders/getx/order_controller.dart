@@ -11,10 +11,28 @@ class OrderController extends GetxController {
   //reactive variables
   RxString query = ''.obs;
   RxString selectedDate = DateTime.now().toIso8601String().obs;
+  RxDouble totalDue = (0.0).obs;
 
   //text editing controllers
   final Rx<TextEditingController> queryTextEditingController =
       TextEditingController().obs;
+
+
+
+  @override
+  void onInit() {
+    getOrderTotalAmount();
+    super.onInit();
+  }
+
+
+
+
+  void getOrderTotalAmount() {
+    final double total = order.items.fold(
+        0, (double prev, Product prod) => prev += (prod.quantity * prod.price));
+    totalDue(total);
+  }
 
   void navigateToOrderPreviewScreen() {
     Get.to(() => const OrderPreviewScreen(),

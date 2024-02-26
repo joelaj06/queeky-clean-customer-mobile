@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d84b3f-45e2-41df-9b2f-c8ecaafd7095" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/paper-cut.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.freezed.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.freezed.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.freezed.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/screens/order_preview_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/presentation/routes/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/routes/app_routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/presentation/routes/pages.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/routes/pages.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/presentation/utils/app_asset_images.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/utils/app_asset_images.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/getx/home_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/getx/home_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/getx/order_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/getx/order_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/screens/order_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/screens/order_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/screens/order_preview_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/screens/order_preview_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
