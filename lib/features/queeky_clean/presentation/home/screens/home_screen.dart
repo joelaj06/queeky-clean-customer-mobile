@@ -168,47 +168,50 @@ class HomeScreen extends GetView<HomeController> {
 
   Widget _buildCategoryCard(BuildContext context,
       {required String title, required String image}) {
-    return Container(
-      padding: AppPaddings.lA,
-      height: 120,
-      decoration: BoxDecoration(
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: HintColor.color.withOpacity(0.4),
-            offset: const Offset(-1, 3),
-            blurRadius: 12,
-            spreadRadius: -5,
-          )
-        ],
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                opacity: 0.2,
-                image: AssetImage(
-                  AppAssetImages.bubbles,
+    return InkWell(
+      onTap: () => controller.navigateToProductsScreen(image),
+      child: Container(
+        padding: AppPaddings.lA,
+        height: 120,
+        decoration: BoxDecoration(
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              color: HintColor.color.withOpacity(0.4),
+              offset: const Offset(-1, 3),
+              blurRadius: 12,
+              spreadRadius: -5,
+            )
+          ],
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  opacity: 0.2,
+                  image: AssetImage(
+                    AppAssetImages.bubbles,
+                  ),
                 ),
               ),
+              child: Image.asset(
+                image,
+                height: 80,
+              ),
             ),
-            child: Image.asset(
-              image,
-              height: 80,
+            Text(
+              title,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                color: HintColor.color,
+              ),
             ),
-          ),
-          Text(
-            title,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              color: HintColor.color,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

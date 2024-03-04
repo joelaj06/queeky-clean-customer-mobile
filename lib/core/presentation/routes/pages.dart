@@ -14,6 +14,8 @@ import 'package:queeky_clean/features/queeky_clean/presentation/notification/get
 import 'package:queeky_clean/features/queeky_clean/presentation/orders/getx/order_bindings.dart';
 import 'package:queeky_clean/features/queeky_clean/presentation/orders/screens/order_preview_screen.dart';
 import 'package:queeky_clean/features/queeky_clean/presentation/orders/screens/order_screen.dart';
+import 'package:queeky_clean/features/queeky_clean/presentation/products/getx/products_bindings.dart';
+import 'package:queeky_clean/features/queeky_clean/presentation/products/screens/products_screen.dart';
 
 class Pages {
   static List<GetPage<AppRoutes>> pages = <GetPage<AppRoutes>>[
@@ -62,6 +64,10 @@ class Pages {
       name: AppRoutes.orderPreview,
       page: () => const OrderPreviewScreen(),
       binding: OrderBindings(),
+    ),  GetPage<AppRoutes>(
+      name: AppRoutes.products,
+      page: () => const ProductsScreen(),
+      binding: ProductBindings(),
     ),
   ];
 }
