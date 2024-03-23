@@ -5,6 +5,7 @@ import 'package:queeky_clean/core/presentation/theme/hint_color.dart';
 import 'package:queeky_clean/core/presentation/utils/app_asset_images.dart';
 import 'package:queeky_clean/core/presentation/utils/app_paddings.dart';
 import 'package:queeky_clean/core/presentation/utils/app_spacing.dart';
+import 'package:queeky_clean/features/queeky_clean/data/models/response/category/category.dart';
 import 'package:queeky_clean/features/queeky_clean/presentation/home/getx/home_controller.dart';
 
 class HomeScreen extends GetView<HomeController> {
@@ -91,8 +92,8 @@ class HomeScreen extends GetView<HomeController> {
                       backgroundColor: Colors.white,
                       radius: 30,
                       child: ColorFiltered(
-                        colorFilter:
-                            const ColorFilter.mode(Colors.white, BlendMode.color),
+                        colorFilter: const ColorFilter.mode(
+                            Colors.white, BlendMode.color),
                         child: Image.asset(
                           AppAssetImages.washingMachine2,
                           height: 35,
@@ -101,7 +102,9 @@ class HomeScreen extends GetView<HomeController> {
                       ),
                     ),
                   ),
-                  const AppSpacing(h: 10,),
+                  const AppSpacing(
+                    h: 10,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -131,45 +134,19 @@ class HomeScreen extends GetView<HomeController> {
       mainAxisSpacing: 40.0,
       childAspectRatio: 1,
       crossAxisCount: _calculateCrossAxisCount(context),
-      children: <Widget>[
-        _buildCategoryCard(
-          context,
-          title: 'Washing',
-          image: AppAssetImages.washingMachine,
-        ),
-        _buildCategoryCard(
-          context,
-          title: 'Steam Press',
-          image: AppAssetImages.steamPress,
-        ),
-        _buildCategoryCard(
-          context,
-          title: 'Dry Cleaning',
-          image: AppAssetImages.cleaningSpray,
-        ),
-        _buildCategoryCard(
-          context,
-          title: 'Deep Cleaning',
-          image: AppAssetImages.deepClean,
-        ),
-        _buildCategoryCard(
-          context,
-          title: 'Formal Wash',
-          image: AppAssetImages.cleanClothes,
-        ),
-        _buildCategoryCard(
-          context,
-          title: 'Others',
-          image: AppAssetImages.brush,
-        ),
-      ],
+      children: List<Widget>.generate(
+          controller.categories.length,
+          (int index) => _buildCategoryCard(
+                context,
+                controller.categories[index]
+              )),
     );
   }
 
   Widget _buildCategoryCard(BuildContext context,
-      {required String title, required String image}) {
+     Category category) {
     return InkWell(
-      onTap: () => controller.navigateToProductsScreen(image),
+      onTap: () => controller.navigateToProductsScreen(category),
       child: Container(
         padding: AppPaddings.lA,
         height: 120,
@@ -199,12 +176,12 @@ class HomeScreen extends GetView<HomeController> {
                 ),
               ),
               child: Image.asset(
-                image,
+                category.image!,
                 height: 80,
               ),
             ),
             Text(
-              title,
+              category.name,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 color: HintColor.color,

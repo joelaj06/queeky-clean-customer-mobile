@@ -180,7 +180,7 @@ class OrderPreviewScreen extends GetView<OrderController> {
         SizedBox(
           width: context.width * 0.20,
           child: Text(
-            (item.price * item.quantity).toStringAsFixed(2),
+            (item.price * item.quantity!).toStringAsFixed(2),
             textAlign: TextAlign.end,
           ),
         )

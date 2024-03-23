@@ -20,7 +20,7 @@ Order _$OrderFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Order {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'order_code')
   String get orderCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_price')
@@ -50,7 +50,7 @@ abstract class $OrderCopyWith<$Res> {
       _$OrderCopyWithImpl<$Res, Order>;
   @useResult
   $Res call(
-      {int id,
+      {String id,
       @JsonKey(name: 'order_code') String orderCode,
       @JsonKey(name: 'total_price') double totalPrice,
       double? discount,
@@ -96,7 +96,7 @@ class _$OrderCopyWithImpl<$Res, $Val extends Order>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       orderCode: null == orderCode
           ? _value.orderCode
           : orderCode // ignore: cast_nullable_to_non_nullable
@@ -161,7 +161,7 @@ abstract class _$$OrderImplCopyWith<$Res> implements $OrderCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int id,
+      {String id,
       @JsonKey(name: 'order_code') String orderCode,
       @JsonKey(name: 'total_price') double totalPrice,
       double? discount,
@@ -206,7 +206,7 @@ class __$$OrderImplCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       orderCode: null == orderCode
           ? _value.orderCode
           : orderCode // ignore: cast_nullable_to_non_nullable
@@ -278,7 +278,7 @@ class _$OrderImpl extends _Order {
       _$$OrderImplFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   @JsonKey(name: 'order_code')
   final String orderCode;
@@ -379,7 +379,7 @@ class _$OrderImpl extends _Order {
 
 abstract class _Order extends Order {
   const factory _Order(
-      {required final int id,
+      {required final String id,
       @JsonKey(name: 'order_code') required final String orderCode,
       @JsonKey(name: 'total_price') required final double totalPrice,
       final double? discount,
@@ -396,7 +396,7 @@ abstract class _Order extends Order {
   factory _Order.fromJson(Map<String, dynamic> json) = _$OrderImpl.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   @JsonKey(name: 'order_code')
   String get orderCode;

@@ -7,7 +7,7 @@ part of 'order_response.dart';
 // **************************************************************************
 
 _$OrderImpl _$$OrderImplFromJson(Map<String, dynamic> json) => _$OrderImpl(
-      id: json['id'] as int,
+      id: json['id'] as String,
       orderCode: json['order_code'] as String,
       totalPrice: (json['total_price'] as num).toDouble(),
       discount: (json['discount'] as num?)?.toDouble(),

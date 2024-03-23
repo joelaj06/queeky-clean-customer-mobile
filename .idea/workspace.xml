@@ -5,15 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d84b3f-45e2-41df-9b2f-c8ecaafd7095" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/products/getx/products_bindings.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/products/getx/products_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/products/screens/products_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/presentation/utils/app_snack.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/utils/shared_preferences_wrapper.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/utils/shared_prefs_keys.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/request/product/product_request.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/category/category.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/category/category.freezed.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/category/category.g.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/main_bindings.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/presentation/routes/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/routes/app_routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/app/queeky_clean_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/app/queeky_clean_app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/error_handling/error_boundary.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/error_handling/error_boundary.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/presentation/nav/bottom_nav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/nav/bottom_nav.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/core/presentation/routes/pages.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/routes/pages.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/presentation/theme/app_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/presentation/theme/app_theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.freezed.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/authentication/data/models/response/user/user_response.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.freezed.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/orders/order_response.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.freezed.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/data/models/response/product/product_response.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/base/screens/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/base/screens/base_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/cart/getx/cart_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/cart/getx/cart_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/cart/screens/cart_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/cart/screens/cart_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/getx/home_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/getx/home_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/screens/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/home/screens/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/getx/order_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/getx/order_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/screens/order_preview_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/orders/screens/order_preview_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/products/getx/products_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/products/getx/products_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/products/screens/products_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/queeky_clean/presentation/products/screens/products_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +103,7 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/mobile/repos/queeky-clean-customer-mobile/lib/core/utils&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/mobile/repos/queeky-clean-customer-mobile/lib/core/presentation/utils&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -85,9 +112,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\mobile\repos\queeky-clean-customer-mobile\lib\core\presentation\utils" />
       <recent name="C:\mobile\repos\queeky-clean-customer-mobile\lib\core\utils" />
       <recent name="C:\mobile\repos\queeky-clean-customer-mobile\lib\core\presentation\widgets" />
-      <recent name="C:\mobile\repos\queeky-clean-customer-mobile\lib\core\presentation\utils" />
       <recent name="C:\mobile\queeky_clean\lib\core\presentation" />
       <recent name="C:\mobile\queeky_clean\assets" />
     </key>

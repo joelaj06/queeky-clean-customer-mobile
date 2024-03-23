@@ -18,7 +18,7 @@ class AppTheme {
         primaryIconTheme: IconThemeData(
           color: colors.primary,
         ),
-         colorScheme: ColorScheme.fromSwatch(
+        colorScheme: ColorScheme.fromSwatch(
           primarySwatch: colors.primary,
           //primaryColorDark: colors.primary.shade900,
           accentColor: colors.accent,
@@ -31,6 +31,9 @@ class AppTheme {
         primaryColor: colors.primary,
         brightness: colors.brightness,
         scaffoldBackgroundColor: colors.background,
+        dividerTheme: DividerThemeData(
+          color: HintColor.color.shade300,
+        ),
         textTheme: TextTheme(
           displaySmall: displaySmall,
           headlineMedium: headlineMedium,
@@ -43,7 +46,6 @@ class AppTheme {
           labelSmall: labelSmall,
           bodySmall: bodySmall,
           labelLarge: labelLarge,
-
         ),
       );
 
@@ -94,9 +96,10 @@ class AppTheme {
       );
 
   TextStyle get titleSmall => const TextStyle(
-        fontSize: 14, fontWeight: FontWeight.w500, letterSpacing: 0.1,
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.1,
         fontFamily: AppFonts.poppins,
-
       );
 
   TextStyle get bodyLarge => TextStyle(

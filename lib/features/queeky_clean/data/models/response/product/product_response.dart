@@ -1,6 +1,8 @@
 // ignore_for_file: invalid_annotation_target
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../category/category.dart';
+
 part 'product_response.freezed.dart';
 
 part 'product_response.g.dart';
@@ -8,10 +10,11 @@ part 'product_response.g.dart';
 @freezed
 class Product with _$Product {
   const factory Product({
-    required int id,
+    required String id,
     required String name,
     required double price,
-    required int quantity,
+    int? quantity,
+    Category? category,
     String? description,
   }) = _Product;
 
@@ -21,9 +24,8 @@ class Product with _$Product {
       _$ProductFromJson(json);
 
   factory Product.empty() => const Product(
-        id: 0,
+        id: '',
         name: '',
         price: 0,
-        quantity: 0,
       );
 }

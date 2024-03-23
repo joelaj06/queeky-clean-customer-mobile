@@ -49,9 +49,10 @@ class Pages {
       name: AppRoutes.base,
       page: () => const BaseScreen(),
       bindings: <Bindings>[
+        CartBindings(),
+        ProductBindings(),
         OrderBindings(),
         HomeBindings(),
-        CartBindings(),
         NotificationBindings(),
       ],
     ),

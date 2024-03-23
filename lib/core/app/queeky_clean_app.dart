@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queeky_clean/core/presentation/routes/app_routes.dart';
 import 'package:queeky_clean/core/presentation/routes/pages.dart';
+import 'package:queeky_clean/main_bindings.dart';
 
 import '../presentation/theme/app_light_theme.dart';
 import '../presentation/theme/app_theme.dart';
@@ -20,7 +21,8 @@ class QueekyCleanApp extends StatelessWidget {
           title: 'Queeky Clean',
           theme: AppTheme(AppLightTheme(),context).data,
           getPages: Pages.pages,
-          initialRoute:  AppRoutes.base
+          initialRoute:  AppRoutes.base,
+          initialBinding: MainBindings(),
       ),
     );
   }

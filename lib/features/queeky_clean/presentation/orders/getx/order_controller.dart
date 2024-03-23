@@ -30,7 +30,7 @@ class OrderController extends GetxController {
 
   void getOrderTotalAmount() {
     final double total = order.items.fold(
-        0, (double prev, Product prod) => prev += (prod.quantity * prod.price));
+        0, (double prev, Product prod) => prev += (prod.quantity! * prod.price));
     totalDue(total);
   }
 
@@ -61,18 +61,18 @@ class OrderController extends GetxController {
   }
 
   final Order order = const Order(
-    id: 1,
+    id: '1',
     orderCode: 'ORD123',
     totalPrice: 62.93,
     discount: 5.0,
     note: 'Handle with care',
     items: <Product>[
-      Product(id: 1, name: 'T-Shirt', price: 5.99, quantity: 3),
-      Product(id: 2, name: 'Jeans', price: 12.99, quantity: 2),
-      Product(id: 3, name: 'Bed Sheets', price: 9.99, quantity: 1),
+      Product(id: '1', name: 'T-Shirt', price: 5.99, quantity: 3),
+      Product(id: '2', name: 'Jeans', price: 12.99, quantity: 2),
+      Product(id: '3', name: 'Bed Sheets', price: 9.99, quantity: 1),
     ],
     customer: User(
-        id: 101,
+        id: '101',
         name: 'John Doe',
         phone: '+1234567890',
         email: 'john@example.com'),

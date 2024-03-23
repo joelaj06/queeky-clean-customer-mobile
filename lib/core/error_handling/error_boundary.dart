@@ -21,10 +21,10 @@ class ErrorBoundary {
         FlutterError.presentError(details);
       }
     };
-
-    runZonedGuarded(() {
       WidgetsFlutterBinding.ensureInitialized();
        runApp(child);
-    }, onException);
+
+  /*  runZonedGuarded(() {
+    }, onException);*/
   }
 }

@@ -14,7 +14,7 @@ const List<IconData> navIcons = <IconData>[
 
 const List<String> navIconsText = <String>[
   'Home',
-  'Cart',
+  'Basket',
   'Notification',
   'More'
 ];

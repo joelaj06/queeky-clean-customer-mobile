@@ -20,10 +20,11 @@ Product _$ProductFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Product {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   double get price => throw _privateConstructorUsedError;
-  int get quantity => throw _privateConstructorUsedError;
+  int? get quantity => throw _privateConstructorUsedError;
+  Category? get category => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,7 +38,14 @@ abstract class $ProductCopyWith<$Res> {
       _$ProductCopyWithImpl<$Res, Product>;
   @useResult
   $Res call(
-      {int id, String name, double price, int quantity, String? description});
+      {String id,
+      String name,
+      double price,
+      int? quantity,
+      Category? category,
+      String? description});
+
+  $CategoryCopyWith<$Res>? get category;
 }
 
 /// @nodoc
@@ -56,14 +64,15 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? id = null,
     Object? name = null,
     Object? price = null,
-    Object? quantity = null,
+    Object? quantity = freezed,
+    Object? category = freezed,
     Object? description = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -72,15 +81,31 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as double,
-      quantity: null == quantity
+      quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Category?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CategoryCopyWith<$Res>? get category {
+    if (_value.category == null) {
+      return null;
+    }
+
+    return $CategoryCopyWith<$Res>(_value.category!, (value) {
+      return _then(_value.copyWith(category: value) as $Val);
+    });
   }
 }
 
@@ -92,7 +117,15 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int id, String name, double price, int quantity, String? description});
+      {String id,
+      String name,
+      double price,
+      int? quantity,
+      Category? category,
+      String? description});
+
+  @override
+  $CategoryCopyWith<$Res>? get category;
 }
 
 /// @nodoc
@@ -109,14 +142,15 @@ class __$$ProductImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? price = null,
-    Object? quantity = null,
+    Object? quantity = freezed,
+    Object? category = freezed,
     Object? description = freezed,
   }) {
     return _then(_$ProductImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -125,10 +159,14 @@ class __$$ProductImplCopyWithImpl<$Res>
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as double,
-      quantity: null == quantity
+      quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
+      category: freezed == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Category?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -144,7 +182,8 @@ class _$ProductImpl extends _Product {
       {required this.id,
       required this.name,
       required this.price,
-      required this.quantity,
+      this.quantity,
+      this.category,
       this.description})
       : super._();
 
@@ -152,19 +191,21 @@ class _$ProductImpl extends _Product {
       _$$ProductImplFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
   final double price;
   @override
-  final int quantity;
+  final int? quantity;
+  @override
+  final Category? category;
   @override
   final String? description;
 
   @override
   String toString() {
-    return 'Product(id: $id, name: $name, price: $price, quantity: $quantity, description: $description)';
+    return 'Product(id: $id, name: $name, price: $price, quantity: $quantity, category: $category, description: $description)';
   }
 
   @override
@@ -177,14 +218,16 @@ class _$ProductImpl extends _Product {
             (identical(other.price, price) || other.price == price) &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
             (identical(other.description, description) ||
                 other.description == description));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, name, price, quantity, description);
+  int get hashCode => Object.hash(
+      runtimeType, id, name, price, quantity, category, description);
 
   @JsonKey(ignore: true)
   @override
@@ -202,23 +245,26 @@ class _$ProductImpl extends _Product {
 
 abstract class _Product extends Product {
   const factory _Product(
-      {required final int id,
+      {required final String id,
       required final String name,
       required final double price,
-      required final int quantity,
+      final int? quantity,
+      final Category? category,
       final String? description}) = _$ProductImpl;
   const _Product._() : super._();
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$ProductImpl.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override
   double get price;
   @override
-  int get quantity;
+  int? get quantity;
+  @override
+  Category? get category;
   @override
   String? get description;
   @override

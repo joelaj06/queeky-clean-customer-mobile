@@ -9,7 +9,7 @@ part 'user_response.g.dart';
 @freezed
 class User with _$User {
   const factory User({
-    required int id,
+    required String id,
     required String name,
     String? image,
     String? phone,
@@ -21,6 +21,6 @@ class User with _$User {
   factory User.fromJson(Map<String, dynamic> json) =>
       _$UserFromJson(json);
 
-  factory User.empty() => const User(id: 0, name: '', );
+  factory User.empty() => const User(id: '', name: '', );
 
 }

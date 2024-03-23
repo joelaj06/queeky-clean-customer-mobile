@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:queeky_clean/core/presentation/nav/bottom_nav.dart';
 import 'package:queeky_clean/core/presentation/theme/app_theme.dart';
+import 'package:queeky_clean/features/queeky_clean/presentation/products/getx/products_controller.dart';
 
 import '../../../../../core/presentation/theme/secondary_color.dart';
-import '../../cart/getx/cart_controller.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
@@ -84,18 +84,18 @@ class _BaseScreenState extends State<BaseScreen> {
               height: 10,
               width: (width / navIcons.length) * 0.15,
             ),
-            GetBuilder<CartController>(
-                builder: (CartController cartController) {
+            GetBuilder<ProductsController>(
+                builder: (ProductsController controller) {
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 300),
                 child: index == 1
                     ? Badge(
-                        isLabelVisible: false,
+                        isLabelVisible: true,
                         backgroundColor: SecondaryColor.color.shade900,
                         label: Obx(
-                          () => const Text(
-                            '0',
-                            style: TextStyle(color: Colors.white),
+                          () =>  Text(
+                            controller.cartList.length.toString(),
+                            style: const TextStyle(color: Colors.white),
                           ),
                         ),
                         child: Icon(

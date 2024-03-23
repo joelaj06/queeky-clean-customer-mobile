@@ -10,7 +10,7 @@ part 'order_response.g.dart';
 @freezed
 class Order with _$Order {
   const factory Order({
-    required int id,
+    required String id,
     @JsonKey(name: 'order_code') required String orderCode,
     @JsonKey(name: 'total_price') required double totalPrice,
     double? discount,
@@ -29,7 +29,7 @@ class Order with _$Order {
   factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
 
   factory Order.empty() =>  Order(
-        id: 0,
+        id: '',
         customer: User.empty(),
         orderCode: '',
         status: '', totalPrice: 0, items: <Product>[],
